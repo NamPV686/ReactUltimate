@@ -5,12 +5,18 @@ class DisplayInfo extends React.Component{
     render(){
 
         //destructuring array/object
-        const{name, age, myInfo} = this.props;
+        const {listUser} = this.props;
         return(
             <div>
-                My name's {name} <br></br>
-                My age's {age} <br></br>
-                My info {myInfo}
+                {listUser.map((user) => {
+                    return(
+                        <div key={user.id}>
+                            <div>My name's {user.name}</div>
+                            <div>My age's {user.age}</div>
+                            <hr></hr>
+                        </div>
+                    );
+                })}
             </div>
         );
     }
