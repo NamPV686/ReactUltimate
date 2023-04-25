@@ -23,10 +23,11 @@ class MyComponent extends React.Component {
     //JSX
     render(){
         return (
-            <div>
+            //Fragment
+            <>
                 <AddUserInfo  handleAddNewUser={this.handleAddNewUser}></AddUserInfo>
                 <DisplayInfo listUser = {this.state.listUser}></DisplayInfo>
-            </div>
+            </>
         );
     }
 }
